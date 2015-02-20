@@ -10,7 +10,7 @@ omxplayer.start("movie.mkv");
 var omxPlayerService = omxplayer._sessionBus.getService('org.mpris.MediaPlayer2.omxplayer');
 console.log("Omx player service=", omxPlayerService);
 
-omxPlayerService.listNames(function(error, list) {
+omxplayer._sessionBus.listNames(function(error, list) {
 	if (error) {
 		console.error("Get interface error:", error);
 		return;
