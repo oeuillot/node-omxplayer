@@ -19,8 +19,7 @@ omxplayer._sessionBus.listNames(function(error, list) {
 
 });
 
-omxPlayerService.getObject('/org/mpris/MediaPlayer2', 'org.freedesktop.DBus.Properties.Position', function(error,
-		omxPlayerNotificationsInterface) {
+omxPlayerService.getObject('/org/mpris/MediaPlayer2', function(error, omxPlayerNotificationsInterface) {
 	if (error) {
 		console.error("Get interface error:", error);
 		return;
