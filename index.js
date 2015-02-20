@@ -5,7 +5,7 @@ var configuration = {
 };
 
 var omxplayer = new OMXPlayer(configuration);
-omxplayer.start(path);
+omxplayer.start("movie.mkv");
 
 var omxPlayerService = sessionBus.getService('org.mpris.MediaPlayer2.omxplayer');
 console.debug("Omx player service=", omxPlayerService);
