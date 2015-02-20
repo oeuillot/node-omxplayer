@@ -19,7 +19,7 @@ omxplayer._sessionBus.listNames(function(error, list) {
 
 });
 
-omxPlayerService.getObject('/org/mpris/MediaPlayer2', function(error, omxPlayerNotificationsInterface) {
+omxPlayerService.getInterface('/org/mpris/MediaPlayer2', function(error, omxPlayerNotificationsInterface) {
 	if (error) {
 		console.error("Get interface error:", error);
 		return;
