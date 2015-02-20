@@ -11,7 +11,7 @@
     "url": "https://github.com/oeuillot/nodejs-omxplayer.git"
   },
   "dependencies": {
-	  "dbus-native": "git@github.com:sidorares/node-dbus",
+	  "dbus-native": "latest",
 	  "userid": "latest"
   },
   "keywords": [
