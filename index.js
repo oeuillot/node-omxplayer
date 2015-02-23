@@ -13,7 +13,11 @@ omxplayer.start("movie.mkv", function(error) {
 	setInterval(function() {
 
 		omxplayer.getPosition(function(error, position) {
-			console.log("Position=", position, " error=", error);
+			if (error) {
+				console.error("GetPosition returns error", error);
+				return;
+			}
+			console.log("Position=", position);
 		});
 
 	}, 1000);
