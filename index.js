@@ -21,4 +21,21 @@ omxplayer.start("movie.mkv", function(error) {
 		});
 
 	}, 1000);
+
+	setInterval(function() {
+
+		omxplayer.getVolume(function(error, volume) {
+			if (error) {
+				console.error("GetPosition returns error", error);
+				return;
+			}
+			console.log("Volume=", volume);
+
+			omxplayer.setVolume(volume + 1, function(error, v) {
+				console.error("SetVolume returns ", v);
+
+			});
+		});
+
+	}, 10000);
 });
