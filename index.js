@@ -4,4 +4,9 @@ var configuration = {};
 
 var omxplayer = new OMXPlayer(configuration);
 console.log(omxplayer);
-omxplayer.start("movie.mkv");
+omxplayer.start("movie.mkv", function(error) {
+	if (error) {
+		console.error("Start: ", error);
+		return;
+	}
+});
