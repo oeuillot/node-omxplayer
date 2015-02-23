@@ -10,6 +10,7 @@ omxplayer.start("movie.mkv", function(error) {
 		return;
 	}
 
+	/*
 	setInterval(function() {
 
 		omxplayer.getPosition(function(error, position) {
@@ -36,5 +37,5 @@ omxplayer.start("movie.mkv", function(error) {
 			});
 		});
 
-	}, 10000);
+	}, 10000);*/
 });
