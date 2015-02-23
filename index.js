@@ -33,7 +33,6 @@ omxplayer.start("movie.mkv", function(error) {
 
 			omxplayer.setVolume(volume + 1, function(error, v) {
 				console.error("SetVolume returns ", v);
-
 			});
 		});
 
