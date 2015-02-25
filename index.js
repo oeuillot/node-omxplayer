@@ -26,7 +26,7 @@ commander.command('*').description("node-omxplayer <filename> [filenames ...]").
 
 	var omxplayer = new OMXPlayer(commander);
 
-	var list = arguments.splice(0);
+	var list = Array.prototype.slice.call(arguments);
 
 	function start() {
 		var next = list.shift();
