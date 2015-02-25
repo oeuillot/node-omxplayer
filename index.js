@@ -1,3 +1,5 @@
+var fs = require('fs');
+
 var OMXPlayer = require('./lib/omxplayer');
 var commander;
 try {
