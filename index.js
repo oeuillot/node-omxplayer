@@ -2,13 +2,11 @@ var OMXPlayer = require('./lib/omxplayer');
 var commander;
 try {
 	commander = require('commander');
-	
+
 } catch (x) {
 	console.error("You must install the package 'commander' for this sample !  (npm install commander)");
 	process.exit(1);
 }
-
-commander.command('node-omxplayer <filename> [filenames ...]');
 
 commander.version(require("./package.json").version);
 
@@ -24,7 +22,7 @@ commander.option("--orientation <int>", "Set orientation of video (0, 90, 180 or
 commander.option("--vol <volume>", "Set initial volume in millibels (default 0)", parseFloat);
 commander.option("--path <omxPlayerPath>", "Path of omxplayer");
 
-commander.action(function(fileName, filenames) {
+commander.command('*').description("node-omxplayer <filename> [filenames ...]").action(function(fileNames) {
 
 	var omxplayer = new OMXPlayer(commander);
 
