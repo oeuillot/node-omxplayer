@@ -39,7 +39,11 @@ commander.command('*').description("node-omxplayer <filename> [filenames ...]").
 
 		console.log("Start movie", next);
 
-		omxplayer.start(next, function(error) {
+		var stream = fs.openSync(next, 'r');
+
+		omxplayer.stream(stream, function(error) {
+			stream.close();
+
 			if (error) {
 				console.error("Start error: ", error);
 				return;
