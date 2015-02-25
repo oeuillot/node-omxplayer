@@ -44,7 +44,7 @@ commander.command('*').description("node-omxplayer <filename> [filenames ...]").
 		console.log("Start movie", next, " stream=", stream);
 
 		omxplayer.stream(stream, function(error) {
-			stream.close();
+			fs.close(stream);
 
 			if (error) {
 				console.error("Start error: ", error);
