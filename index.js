@@ -29,6 +29,9 @@ commander.command('*').description("node-omxplayer <filename> [filenames ...]").
 	var list = Array.prototype.slice.call(arguments);
 
 	function start() {
+		if (!list.length) {
+			return;
+		}
 		var next = list.shift();
 
 		console.log("Start movie", next);
