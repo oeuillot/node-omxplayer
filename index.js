@@ -26,12 +26,13 @@ commander.command('*').description("node-omxplayer <filename> [filenames ...]").
 
 	var omxplayer = new OMXPlayer(commander);
 
-	var list = Array.prototype.slice.call(arguments, 0, arguments.length-1);
+	var list = Array.prototype.slice.call(arguments, 0, arguments.length - 1);
 
 	console.log("Arguments=", list);
 
 	function start() {
 		if (!list.length) {
+			console.log("Last movie done !");
 			return;
 		}
 		var next = list.shift();
@@ -43,10 +44,10 @@ commander.command('*').description("node-omxplayer <filename> [filenames ...]").
 				console.error("Start error: ", error);
 				return;
 			}
+
+			omxplayer.once("stopped", start);
 		});
 	}
-
-	omxplayer.on("stopped", start);
 
 	start();
 });
