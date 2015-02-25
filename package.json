@@ -19,6 +19,8 @@
     "pi",
     "omxplayer"
   ],
+  "readmeFilename": "README.md",
+  "homepage": "https://github.com/oeuillot/nodejs-omxplayer",
   "author": "olivier.oeuillot@gmail.com",
-  "license": "BSD"
+  "license": "MIT"
 }
