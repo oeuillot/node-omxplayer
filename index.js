@@ -28,6 +28,8 @@ commander.command('*').description("node-omxplayer <filename> [filenames ...]").
 
 	var list = Array.prototype.slice.call(arguments);
 
+	console.log("Arguments=", list);
+
 	function start() {
 		if (!list.length) {
 			return;
@@ -38,7 +40,7 @@ commander.command('*').description("node-omxplayer <filename> [filenames ...]").
 
 		omxplayer.start(next, function(error) {
 			if (error) {
-				console.error("Start: ", error);
+				console.error("Start error: ", error);
 				return;
 			}
 		});
