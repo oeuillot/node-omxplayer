@@ -1,7 +1,14 @@
 var OMXPlayer = require('./lib/omxplayer');
-var commander = require('commander');
+var commander;
+try {
+	commander = require('commander');
+	
+} catch (x) {
+	console.error("You must install the package 'commander' for this sample !  (npm install commander)");
+	process.exit(1);
+}
 
-command.command('node-omxplayer <filename> [filenames ...]');
+commander.command('node-omxplayer <filename> [filenames ...]');
 
 commander.version(require("./package.json").version);
 
