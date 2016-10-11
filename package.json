@@ -11,8 +11,8 @@
     "url": "https://github.com/oeuillot/nodejs-omxplayer.git"
   },
   "dependencies": {
-	  "dbus-native": "latest",
-	  "semaphore": "latest"
+    "dbus-native": "^0.2.0",
+    "semaphore": "^1.0.5"
   },
   "keywords": [
     "Raspberry",
