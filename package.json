@@ -1,26 +1,33 @@
 {
   "name": "omxplayer",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Nodejs module to control omxplayer. Specifically written for the raspberry pi",
   "main": "lib/omxplayer.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/oeuillot/node-omxplayer.git"
+  "directories": {
+    "example": "examples"
   },
   "dependencies": {
     "dbus-native": "^0.2.0",
     "semaphore": "^1.0.5"
   },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oeuillot/node-omxplayer.git"
+  },
   "keywords": [
+    "omxplayer",
     "Raspberry",
-    "pi",
-    "omxplayer"
+    "PI",
+    "dbus"
   ],
-  "readmeFilename": "README.md",
-  "homepage": "https://github.com/oeuillot/node-omxplayer",
   "author": "olivier.oeuillot@gmail.com",
-  "license": "MIT"
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/oeuillot/node-omxplayer/issues"
+  },
+  "homepage": "https://github.com/oeuillot/node-omxplayer#readme"
 }
