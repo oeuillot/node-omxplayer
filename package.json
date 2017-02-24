@@ -1,6 +1,6 @@
 {
   "name": "omxplayer",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Nodejs module to control omxplayer. Specifically written for the raspberry pi",
   "main": "lib/omxplayer.js",
   "directories": {
@@ -8,7 +8,8 @@
   },
   "dependencies": {
     "dbus-native": "^0.2.0",
-    "semaphore": "^1.0.5"
+    "semaphore": "^1.0.5",
+    "debug": "^2.6.1"
   },
   "devDependencies": {},
   "scripts": {
